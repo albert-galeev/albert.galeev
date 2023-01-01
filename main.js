@@ -1,6 +1,35 @@
+document.addEventListener(
+  "touchmove",
+  function (event) {
+    if (event.scale !== 1) {
+      event.preventDefault();
+    }
+  },
+  { passive: false }
+);
+
+const appleExpression = /Apple/i;
+const safariExpression = /Safari/i;
+
+const isAppleSafari = () => {
+  return (
+    appleExpression.test(navigator.vendor) &&
+    safariExpression.test(navigator.userAgent)
+  );
+};
+
+const bodyClass = document.querySelector("body");
+const classes = bodyClass.classList;
+
+// Usage example:
+
+if (isAppleSafari()) {
+  classes.add("safari");
+}
+
 // Global
 var win = window,
-    doc = document;
+  doc = document;
 
 // Global Functions
 
@@ -31,9 +60,9 @@ var panel = doc.getElementsByClassName("panel");
 var zoom = doc.getElementsByClassName("js-zoom");
 
 var nav_up = doc.getElementsByClassName("js-up"),
-    nav_left = doc.getElementsByClassName("js-left"),
-    nav_right = doc.getElementsByClassName("js-right"),
-    nav_down = doc.getElementsByClassName("js-down");
+  nav_left = doc.getElementsByClassName("js-left"),
+  nav_right = doc.getElementsByClassName("js-right"),
+  nav_down = doc.getElementsByClassName("js-down");
 
 var animation = doc.getElementsByClassName("js-animation");
 

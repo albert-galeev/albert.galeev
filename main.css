@@ -1,6 +1,5 @@
 body {
     background-color: #282a2d;
-    background-image: url('https://i.imgsafe.org/6c147abfa3.jpg');
     background-repeat: repeat;
     color: white;
     font-family: 'Oswald', sans-serif;
@@ -220,6 +219,10 @@ h1 {
     pointer-events: none;
 }
 
+.show-all a {
+    pointer-events: none;
+}
+
 .panel__nav {
     cursor: pointer;
     opacity: 0.2;
@@ -227,6 +230,7 @@ h1 {
     transition: opacity 0.3s cubic-bezier(0.55, 0, 0.1, 1);
     user-select: none;
     will-change: opacity;
+    font-size: 3vmin;
 }
 
 .panel__nav--up {
@@ -273,6 +277,20 @@ h1 {
     bottom: 1rem;
     left: 50%;
     transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+    .safari .panel__nav--down {
+        bottom: 5.7rem;
+    }
+
+    .safari .panel__nav--left-down {
+        bottom: 5.7rem;
+    }
+
+    .safari .panel__nav--right-down {
+        bottom: 5.7rem;
+    }
 }
 
 .panel__nav:hover {
