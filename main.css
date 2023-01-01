@@ -258,6 +258,7 @@ h2 {
     user-select: none;
     will-change: opacity;
     font-size: 3vmin;
+    z-index: 11;
 }
 
 .panel__nav--up {
